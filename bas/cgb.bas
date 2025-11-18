@@ -1,9 +1,9 @@
 10 rem Goldbach
 20 let n=6
-30 let nmax=65536
+30 let nmax=1048576
 40 if n>nmax then 80
 50 goto 1000
-60 let s=1024
+60 let s=4096
 61 if n>n/s*s then 65
 62 print "ok ";n/1024;"k"
 65 let n=n+2
