@@ -13,9 +13,9 @@ jobs:
       run: |
         sudo apt update
         sudo apt install build-essential
+        g++ -o interp/basic interp/basic.cpp -O4 -w -march=native
     
     - name: Run
       run: |
         # Run the program
-        g++ -o interp/basic interp/basic.cpp -O4 -w -march=native
         ./interp/basic
