@@ -134,11 +134,7 @@ public:
                 executionOrder.clear();
                 std::cout << "Program cleared.\n";
             } else {
-                // Try to execute as immediate mode
-                std::vector<std::string> lines = {command};
-                loadProgram(lines);
-                run();
-                program.clear();
+                std::cout << "Unknown command. Available: LOAD, LIST, RUN, CLEAR, QUIT\n";
             }
         }
     }
@@ -166,7 +162,7 @@ private:
             }
             else if (std::isalpha(c)) {
                 std::string ident;
-                while (i < line.length() && (std::isalnum(line[i]) || line[i] == '$' || line[i] == '(' || line[i] == ')' || line[i] == '[' || line[i] == ']')) {
+                while (i < line.length() && (std::isalnum(line[i]) || line[i] == '$')) {
                     ident += line[i++];
                 }
                 i--;
@@ -263,38 +259,40 @@ private:
     int evaluateExpression(const std::vector<Token>& tokens, size_t startIndex, size_t endIndex) {
         if (startIndex >= endIndex || startIndex >= tokens.size()) return 0;
         
-        // Check for array access
-        if (endIndex - startIndex >= 3 && 
-            tokens[startIndex].type == TokenType::IDENTIFIER &&
-            tokens[startIndex + 1].value == "(") {
-            
-            // Find closing parenthesis
-            size_t closeParen = startIndex + 2;
-            int parenDepth = 1;
-            while (closeParen < endIndex && parenDepth > 0) {
-                if (tokens[closeParen].value == "(") parenDepth++;
-                else if (tokens[closeParen].value == ")") parenDepth--;
-                closeParen++;
-            }
-            
-            if (parenDepth == 0) {
-                std::string arrayName = tokens[startIndex].value;
-                int index = evaluateExpression(tokens, startIndex + 2, closeParen - 1);
-                
-                if (arrays.find(arrayName) != arrays.end() && 
-                    index >= 0 && index < static_cast<int>(arrays[arrayName].size())) {
-                    return arrays[arrayName][index];
-                }
-                return 0;
-            }
-        }
-        
-        // Simple evaluation with left-to-right processing
-        // First pass: handle * and /
+        // Handle array access in expressions
         std::vector<Token> processed;
         
         for (size_t i = startIndex; i < endIndex && i < tokens.size(); ++i) {
-            processed.push_back(tokens[i]);
+            if (tokens[i].type == TokenType::IDENTIFIER && 
+                i + 1 < endIndex && tokens[i + 1].value == "[") {
+                // This is an array access
+                std::string arrayName = tokens[i].value;
+                size_t closeBracket = i + 2;
+                int bracketDepth = 1;
+                
+                while (closeBracket < endIndex && bracketDepth > 0) {
+                    if (tokens[closeBracket].value == "[") bracketDepth++;
+                    else if (tokens[closeBracket].value == "]") bracketDepth--;
+                    closeBracket++;
+                }
+                
+                // Evaluate the index expression
+                int index = evaluateExpression(tokens, i + 2, closeBracket - 1);
+                
+                // Get the array value
+                int value = 0;
+                if (arrays.find(arrayName) != arrays.end()) {
+                    if (index >= 0 && index < static_cast<int>(arrays[arrayName].size())) {
+                        value = arrays[arrayName][index];
+                    }
+                }
+                
+                // Replace array access with its value
+                processed.push_back({TokenType::NUMBER, std::to_string(value), 0});
+                i = closeBracket - 1;
+            } else {
+                processed.push_back(tokens[i]);
+            }
         }
         
         // Process * and / first
@@ -338,12 +336,6 @@ private:
             return std::stoi(token.value);
         }
         else if (token.type == TokenType::IDENTIFIER) {
-            // Handle array access with parentheses A(I)
-            if (token.value.find('(') != std::string::npos) {
-                // This is handled in evaluateExpression
-                return 0;
-            }
-            
             if (variables.find(token.value) != variables.end()) {
                 return variables[token.value];
             }
@@ -367,7 +359,16 @@ private:
             else {
                 // Find the end of the expression (until semicolon or end)
                 size_t exprEnd = i;
-                while (exprEnd < tokens.size() && tokens[exprEnd].value != ";") {
+                int parenDepth = 0;
+                int bracketDepth = 0;
+                
+                while (exprEnd < tokens.size()) {
+                    if (tokens[exprEnd].value == "(") parenDepth++;
+                    else if (tokens[exprEnd].value == ")") parenDepth--;
+                    else if (tokens[exprEnd].value == "[") bracketDepth++;
+                    else if (tokens[exprEnd].value == "]") bracketDepth--;
+                    else if (tokens[exprEnd].value == ";" && parenDepth == 0 && bracketDepth == 0) break;
+                    
                     exprEnd++;
                 }
                 
@@ -387,24 +388,25 @@ private:
         
         std::string varName = tokens[startIndex].value;
         
-        // Check if it's an array assignment A(I) = value
-        if (startIndex + 1 < tokens.size() && tokens[startIndex + 1].value == "(") {
-            // Array assignment: LET A(I) = value
-            size_t closeParen = startIndex + 2;
-            int parenDepth = 1;
-            while (closeParen < tokens.size() && parenDepth > 0) {
-                if (tokens[closeParen].value == "(") parenDepth++;
-                else if (tokens[closeParen].value == ")") parenDepth--;
-                closeParen++;
+        // Check if it's an array assignment
+        if (startIndex + 1 < tokens.size() && tokens[startIndex + 1].value == "[") {
+            // Array assignment: LET A[index] = value
+            size_t closeBracket = startIndex + 2;
+            int bracketDepth = 1;
+            
+            while (closeBracket < tokens.size() && bracketDepth > 0) {
+                if (tokens[closeBracket].value == "[") bracketDepth++;
+                else if (tokens[closeBracket].value == "]") bracketDepth--;
+                closeBracket++;
             }
             
-            if (parenDepth > 0) return; // Unmatched parentheses
+            if (closeBracket > tokens.size()) return;
             
-            int index = evaluateExpression(tokens, startIndex + 2, closeParen - 1);
+            int index = evaluateExpression(tokens, startIndex + 2, closeBracket - 1);
             
-            if (closeParen >= tokens.size() || tokens[closeParen].value != "=") return;
+            if (closeBracket >= tokens.size() || tokens[closeBracket].value != "=") return;
             
-            int value = evaluateExpression(tokens, closeParen + 1, tokens.size());
+            int value = evaluateExpression(tokens, closeBracket + 1, tokens.size());
             
             if (arrays.find(varName) != arrays.end()) {
                 if (index >= 0 && index < static_cast<int>(arrays[varName].size())) {
@@ -421,26 +423,23 @@ private:
     }
 
     void executeDim(const std::vector<Token>& tokens, size_t startIndex) {
-        if (startIndex >= tokens.size()) return;
+        if (startIndex + 3 >= tokens.size()) return;
         
         std::string arrayName = tokens[startIndex].value;
         
-        if (startIndex + 1 >= tokens.size() || tokens[startIndex + 1].value != "(") return;
+        if (tokens[startIndex + 1].value != "[") return;
         
-        size_t closeParen = startIndex + 2;
-        int parenDepth = 1;
-        while (closeParen < tokens.size() && parenDepth > 0) {
-            if (tokens[closeParen].value == "(") parenDepth++;
-            else if (tokens[closeParen].value == ")") parenDepth--;
-            closeParen++;
+        size_t closeBracket = startIndex + 2;
+        while (closeBracket < tokens.size() && tokens[closeBracket].value != "]") {
+            closeBracket++;
         }
         
-        if (parenDepth > 0) return; // Unmatched parentheses
+        if (closeBracket >= tokens.size()) return;
         
-        int size = evaluateExpression(tokens, startIndex + 2, closeParen - 1);
+        int size = evaluateExpression(tokens, startIndex + 2, closeBracket);
         
         if (size > 0) {
-            arrays[arrayName] = std::vector<int>(size + 1, 0); // +1 because BASIC arrays are usually 1-based
+            arrays[arrayName] = std::vector<int>(size, 0);
         }
     }
 
@@ -520,6 +519,18 @@ private:
         }
     }
 
+    int getValue(const Token& token) {
+        if (token.type == TokenType::NUMBER) {
+            return std::stoi(token.value);
+        }
+        else if (token.type == TokenType::IDENTIFIER) {
+            if (variables.find(token.value) != variables.end()) {
+                return variables[token.value];
+            }
+        }
+        return 0;
+    }
+
     void jumpToLine(int lineNumber) {
         auto it = lineNumbers.find(lineNumber);
         if (it != lineNumbers.end()) {
@@ -530,24 +541,7 @@ private:
 
 int main() {
     BasicInterpreter interpreter;
-    
-    // Test with the provided BASIC program
-    std::vector<std::string> testProgram = {
-        "10 DIM A(10000)",
-        "20 LET I=33", 
-        "30 LET A(I)=222",
-        "40 LET J=A(I)",
-        "50 PRINT J"
-    };
-    
-    std::cout << "Testing BASIC program:\n";
-    for (const auto& line : testProgram) {
-        std::cout << line << std::endl;
-    }
-    std::cout << "\nOutput:\n";
-    
-    interpreter.loadProgram(testProgram);
-    interpreter.run();
+    interpreter.runInteractive();
     
     return 0;
 }
