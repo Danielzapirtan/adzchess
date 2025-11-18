@@ -1,9 +1,11 @@
 10 rem Goldbach
-20 let n=2*1024*1024
-30 let nmax=4*1024*1024
+20 let ki=1024
+30 let mi=ki*ki
+32 let n=mi
+33 let nmax=2*mi
 40 if n>nmax then 80
 50 goto 1000
-60 let s=16*1024
+60 let s=32*ki
 61 if n>n/s*s then 65
 62 print "ok ";n/1024;"k"
 65 let n=n+2
@@ -15,7 +17,7 @@
 1000 let p=3
 1010 if p>n-p then 900
 1020 let r=p
-1030 goto 2000
+1030 let pr=#r
 1035 if pr=0 then 1080
 1040 let r=n-r
 1050 if r=p then 60
@@ -32,3 +34,8 @@
 2060 goto 2010
 2070 let pr=0
 2080 goto 1035
+3000 if #r then 3030
+3010 let pr=0
+3020 goto 3040
+3030 let pr=1
+3040 goto 1035
