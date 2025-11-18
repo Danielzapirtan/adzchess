@@ -1,1 +1,1 @@
-bas/adzchess.bas
+bas/cgb.bas
