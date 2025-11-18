@@ -1,7 +1,7 @@
-10 REM Simple BASIC Program
-20 DIM A[10000]
-30 LET I=33
-40 LET A[33]=222
-50 LET J=A[33]
-60 PRINT I;J
-70 END
+10 rem Simple Basic program
+20 let i=10000
+30 dim a[i]
+40 let j=22
+50 let a[j]=333
+60 let k=a[j]
+70 print k
