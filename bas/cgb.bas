@@ -25,17 +25,3 @@
 1070 goto 60
 1080 let p=p+2
 1090 goto 1010
-2000 let k=3
-2010 if k<=r/k then 2040
-2020 let pr=1
-2030 goto 1035
-2040 if r=r/k*k then 2070
-2050 let k=k+2
-2060 goto 2010
-2070 let pr=0
-2080 goto 1035
-3000 if #r then 3030
-3010 let pr=0
-3020 goto 3040
-3030 let pr=1
-3040 goto 1035
