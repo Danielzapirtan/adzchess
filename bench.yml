@@ -1,0 +1,21 @@
+name: Test a custom BASIC interpreter
+on:
+  workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install build-essential
+    
+    - name: Run
+      run: |
+        # Run the program
+        g++ -o interp/basic interp/basic.cpp -O4 -w -march=native
+        ./interp/basic
