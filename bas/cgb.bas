@@ -2,8 +2,8 @@
 20 let ki=1024
 30 let mi=ki*ki
 31 let sl=32*mi
-32 let n=6*sl
-33 let nmax=7*sl
+32 let n=7*sl
+33 let nmax=8*sl
 40 if n>nmax then 80
 50 goto 1000
 60 let s=mi
