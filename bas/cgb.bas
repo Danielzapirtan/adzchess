@@ -7,7 +7,7 @@
 50 goto 1000
 60 let s=mi
 61 if n>n/s*s then 65
-62 print "ok ";n/1024;"k"
+62 print "ok ";n/mi;"M"
 65 let n=n+2
 70 goto 40
 80 print "ok ";n-2
