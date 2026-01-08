@@ -1,5 +1,5 @@
 10 rem factor
-20 let p=2147483645
+20 let p=2047
 30 let k=3
 40 if k>p/k then 110
 50 let l=p/k
