@@ -1,6 +1,6 @@
 10 rem Goldbach
 20 let n=6
-30 let nmax=8192*8192
+30 let nmax=16384*16384
 40 if n>nmax then 80
 50 goto 1000
 60 print n;"=";p;"+";n-p
