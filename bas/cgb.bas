@@ -1,17 +1,13 @@
 10 rem Goldbach
-20 let ki=1024
-30 let mi=ki*ki
-31 let sl=mi*mi*mi
-32 let n=sl
-33 let nmax=2*sl
+32 let n=6
+33 let nmax=10000
+35 let mi=2
 40 if n>nmax then 80
 50 goto 1000
-60 let s=mi
-61 if n>n/s*s then 65
-62 print "ok ";n/mi;"M"
+60 print n;"=";p;"+";n-p
 65 let n=n+2
 70 goto 40
-80 print "ok ";n-2
+80 print "ok ";nmax
 90 end
 900 print "Counterexample: ";n
 910 end
@@ -23,6 +19,5 @@
 1040 let r=n-r
 1050 if r=p then 60
 1060 goto 1030
-1070 goto 60
 1080 let p=p+2
 1090 goto 1010

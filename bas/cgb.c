@@ -14,41 +14,32 @@ int isPrime(int n) {
 }
 
 /* Global variables */
-int ki = 0;
 int mi = 0;
 int n = 0;
 int nmax = 0;
 int p = 0;
 int pr = 0;
 int r = 0;
-int s = 0;
-int sl = 0;
 
 int main() {
 L10:
     /* Goldbach */
-L20:
-    ki = 1024;
-L30:
-    mi = ki * ki;
-L31:
-    sl = 64 * mi;
 L32:
-    n = 12 * sl;
+    n = 6;
 L33:
-    nmax = 16 * sl;
+    nmax = 10000;
+L35:
+    mi = 2;
 L40:
     if (n > nmax) goto L80;
 L50:
     goto L1000;
 L60:
-    s = mi;
-L61:
-    if (n > n / s * s) goto L65;
-L62:
-    printf("%s", "ok ");
-    printf("%d", n / mi);
-    printf("%s", "M");
+    printf("%d", n);
+    printf("%s", "=");
+    printf("%d", p);
+    printf("%s", "+");
+    printf("%d", n - p);
     printf("\n");
 L65:
     n = n + 2;
@@ -56,7 +47,7 @@ L70:
     goto L40;
 L80:
     printf("%s", "ok ");
-    printf("%d", n - 2);
+    printf("%d", nmax);
     printf("\n");
 L90:
     return 0;
@@ -82,8 +73,6 @@ L1050:
     if (r == p) goto L60;
 L1060:
     goto L1030;
-L1070:
-    goto L60;
 L1080:
     p = p + 2;
 L1090:
