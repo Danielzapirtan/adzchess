@@ -26,7 +26,7 @@ L10:
 L20:
     n = 6;
 L30:
-    nmax = 10000;
+    nmax = 2048 * 2048;
 L40:
     if (n > nmax) goto L80;
 L50:
@@ -43,10 +43,6 @@ L65:
 L70:
     goto L40;
 L80:
-    printf("%s", "ok ");
-    printf("%d", nmax);
-    printf("\n");
-L90:
     return 0;
 L900:
     printf("%s", "Counterexample: ");
