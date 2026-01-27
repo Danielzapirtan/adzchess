@@ -3,40 +3,43 @@
 #include <string.h>
 
 /* Prime checking function */
-int isPrime(int n) {
+int isPrime(long long n) {
     if (n <= 1) return 0;
     if (n == 2) return 1;
     if (n % 2 == 0) return 0;
-    for (int i = 3; i * i <= n; i += 2) {
+    for (long long i = 3; i * i <= n; i += 2) {
         if (n % i == 0) return 0;
     }
     return 1;
 }
 
 /* Global variables */
-int n = 0;
-int nmax = 0;
-int p = 0;
-int pr = 0;
-int r = 0;
+long long mi = 0;
+long long n = 0;
+long long nmax = 0;
+long long p = 0;
+long long pr = 0;
+long long r = 0;
 
 int main() {
 L10:
     /* Goldbach */
+L15:
+    mi = 1024 * 1024;
 L20:
-    n = 6;
+    n = 1536 * mi;
 L30:
-    nmax = 2048 * 2048;
+    nmax = 1792 * mi;
 L40:
     if (n > nmax) goto L80;
 L50:
     goto L1000;
 L60:
-    printf("%d", n);
+    printf("%lld", n);
     printf("%s", "=");
-    printf("%d", p);
+    printf("%lld", p);
     printf("%s", "+");
-    printf("%d", n - p);
+    printf("%lld", n - p);
     printf("\n");
 L65:
     n = n + 2;
@@ -46,7 +49,7 @@ L80:
     return 0;
 L900:
     printf("%s", "Counterexample: ");
-    printf("%d", n);
+    printf("%lld", n);
     printf("\n");
 L910:
     return 0;
