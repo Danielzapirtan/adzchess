@@ -14,7 +14,6 @@ int isPrime(int n) {
 }
 
 /* Global variables */
-int mi = 0;
 int n = 0;
 int nmax = 0;
 int p = 0;
@@ -24,12 +23,10 @@ int r = 0;
 int main() {
 L10:
     /* Goldbach */
-L32:
+L20:
     n = 6;
-L33:
+L30:
     nmax = 10000;
-L35:
-    mi = 2;
 L40:
     if (n > nmax) goto L80;
 L50:

@@ -1,7 +1,6 @@
 10 rem Goldbach
-32 let n=6
-33 let nmax=10000
-35 let mi=2
+20 let n=6
+30 let nmax=10000
 40 if n>nmax then 80
 50 goto 1000
 60 print n;"=";p;"+";n-p
