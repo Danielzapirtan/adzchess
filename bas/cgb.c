@@ -14,22 +14,22 @@ int isPrime(long long n) {
 }
 
 /* Global variables */
-long long mi = 0;
 long long n = 0;
 long long nmax = 0;
 long long p = 0;
 long long pr = 0;
 long long r = 0;
+long long sl = 0;
 
 int main() {
 L10:
     /* Goldbach */
 L15:
-    mi = 1024 * 1024;
+    sl = 1024 * 1024 * 256;
 L20:
-    n = 1536 * mi;
+    n = sl * ( 10 - 1 );
 L30:
-    nmax = 1792 * mi;
+    nmax = sl * 10;
 L40:
     if (n > nmax) goto L80;
 L50:
