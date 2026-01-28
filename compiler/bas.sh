@@ -8,4 +8,4 @@ g++ -o compiler/bas64toc compiler/bas64toc.cpp -w -O4 -march=native
 cat $SOURCE.bas
 compiler/bas64toc $SOURCE.bas $SOURCE.c
 gcc -o $SOURCE $SOURCE.c -w -O4 -march=native
-$SOURCE $ARGS | sha256sum | tee 1280_1536.txt
+$SOURCE $ARGS | sha256sum | tee 2048_2304.txt
