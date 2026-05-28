@@ -1,0 +1,2 @@
+mkdir -p anl
+(./iccf >anl/start.anl &)

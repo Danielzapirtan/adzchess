@@ -1,0 +1,149 @@
+Processing start.pgn
+Palladino, Mario - Zapirtan, Antoniu Daniel WSTT/SEA/70 ICCF 2026.03.20 
+1 game matched out of 1.
+8 r  n  b  q  k  b  .  r 
+7 .  p  .  .  p  p  p  p 
+6 p  .  .  p  .  n  .  . 
+5 .  .  .  .  .  .  .  . 
+4 .  .  .  N  P  .  .  . 
+3 .  .  N  .  B  .  .  . 
+2 P  P  P  .  .  P  P  P 
+1 R  .  .  Q  K  B  .  R 
+  a  b  c  d  e  f  g  h
+
+8 r  .  .  q  k  b  .  r 
+7 p  p  p  .  .  p  p  p 
+6 .  .  n  .  b  .  .  . 
+5 .  .  .  n  p  .  .  . 
+4 .  .  .  .  .  .  .  . 
+3 P  .  .  P  .  N  .  . 
+2 .  P  .  .  P  P  P  P 
+1 R  N  B  Q  K  B  .  R 
+  a  b  c  d  e  f  g  h
+
+Depth: 5*
+Evaluation: ≡
+Branching factor: 12.59
+Best variation: e7e5 ♘d4f5 d6d5 ♘c3xd5 ♘f6xe4 
+Elapsed: 0.09
+NPS: 3708311
+
+Depth: 5*
+Evaluation: ≡
+Branching factor: 13.99
+Best variation: ♗c8g4 f2f3 e7e5 ♘d4f5 ♕d8d7 
+Elapsed: 0.15
+NPS: 3639741
+
+Depth: 5
+Evaluation: ≡
+Branching factor: 14.96
+Best variation: ♗c8g4 f2f3 e7e5 ♘d4f5 ♕d8d7 
+Elapsed: 0.22
+NPS: 3436312
+
+Depth: 6*
+Evaluation: ≡
+Branching factor: 11.62
+Best variation: ♗c8g4 f2f3 ♕d8a5 ♘d4f5 ♘f6xe4 ♘f5xg7+ 
+Elapsed: 0.84
+NPS: 2937874
+
+Depth: 6*
+Evaluation: ≡
+Branching factor: 14.44
+Best variation: ♘f6xe4 ♘d4b3 ♘e4c5 ♘b3c1 g7g5 ♕d1xd6 
+Elapsed: 4.46
+NPS: 2033383
+
+Depth: 6
+Evaluation: ≡
+Branching factor: 16.78
+Best variation: ♘f6xe4 ♘d4b3 ♘e4c5 ♘b3c1 g7g5 ♕d1xd6 
+Elapsed: 10.83
+NPS: 2059336
+
+Depth: 7*
+Evaluation: ∓
+Branching factor: 12.82
+Best variation: ♘f6xe4 ♘c3xe4 ♕d8a5+ c2c3 ♗c8d7 g2g4 ♕a5xc3+ 
+Elapsed: 19.78
+NPS: 2876655
+
+Depth: 7*
+Evaluation: ⩱
+Branching factor: 14.04
+Best variation: d6d5 e4e5 ♘f6g4 ♗e3g5 h7h5 ♗f1b5+ a6xb5 ♕d1xg4 
+Elapsed: 37.29
+NPS: 2883226
+
+Depth: 7*
+Evaluation: ≡
+Branching factor: 14.87
+Best variation: ♘f6g4 ♗e3g5 h7h6 ♗g5f4 e7e5 ♗f1xa6 ♘g4xf2 
+Elapsed: 56.69
+NPS: 2834654
+
+Depth: 7
+Evaluation: ≡
+Branching factor: 15.25
+Best variation: ♘f6g4 ♗e3g5 h7h6 ♗g5f4 e7e5 ♗f1xa6 ♘g4xf2 
+Elapsed: 68.58
+NPS: 2800153
+
+Depth: 8*
+Evaluation: ≡
+Branching factor: 11.61
+Best variation: ♘f6g4 ♘d4f5 ♘g4xe3 ♘f5xe3 e7e5 ♕d1d5 ♗c8e6 f2f4 
+Elapsed: 123.30
+NPS: 2670901
+
+Depth: 8*
+Evaluation: ≡
+Branching factor: 12.52
+Best variation: ♘f6xe4 ♘d4b3 d6d5 ♕d1xd5 ♘e4xc3 ♕d5xd8+ ♔e8xd8 b2xc3 
+Elapsed: 231.49
+NPS: 2611768
+
+Depth: 8*
+Evaluation: ≡
+Branching factor: 13.18
+Best variation: e7e5 ♘d4f5 d6d5 ♗e3g5 d5d4 ♘c3d5 ♘b8c6 f2f4 
+Elapsed: 345.78
+NPS: 2632495
+
+Depth: 8
+Evaluation: ≡
+Branching factor: 13.61
+Best variation: e7e5 ♘d4f5 d6d5 ♗e3g5 d5d4 ♘c3d5 ♘b8c6 f2f4 
+Elapsed: 436.24
+NPS: 2699352
+
+Depth: 9*
+Evaluation: ≡
+Branching factor: 10.77
+Best variation: e7e5 ♘d4f5 g7g6 ♘f5h6 ♗f8xh6 ♗e3xh6 ♕d8b6 ♘c3d5 ♕b6d4 
+Elapsed: 698.76
+NPS: 2794214
+
+Depth: 9
+Evaluation: ≡
+Branching factor: 11.46
+Best variation: e7e5 ♘d4f5 g7g6 ♘f5h6 ♗f8xh6 ♗e3xh6 ♕d8b6 ♘c3d5 ♕b6d4 
+Elapsed: 1215.15
+NPS: 2815743
+
+Depth: 10*
+Evaluation: ≡
+Branching factor: 9.84
+Best variation: e7e5 ♘d4b3 ♘f6g4 h2h4 ♘g4xe3 f2xe3 d6d5 ♕d1f3 d5d4 h4h5 
+Elapsed: 3104.73
+NPS: 2739227
+
+Depth: 10
+Evaluation: ≡
+Branching factor: 10.79
+Best variation: e7e5 ♘d4b3 ♘f6g4 h2h4 ♘g4xe3 f2xe3 d6d5 ♕d1f3 d5d4 h4h5 
+Elapsed: 7591.11
+NPS: 2808007
+
