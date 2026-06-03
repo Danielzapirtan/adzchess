@@ -1,5 +1,7 @@
 #! /usr/bin/bash
 
+set -e
+
 cd $HOME/git-client/adzchess
 
 export TZ=Europe/Bucharest
