@@ -8,7 +8,7 @@ NPROCESSORS=4
 url1="https://api.chess.com/pub/player/$USERNAME/games/to-move"
 curl -s "$url1" >$HOME/games1.txt &>/dev/null || exit 0
 COUNT=$(jq '.games | length' $HOME/games1.txt)
-[ "x$COUNT" == "x" ] && exit 0
+[ "x$COUNT" = "x" ] && exit 0
 COUNTF=$COUNT
 [ $COUNTF -gt 0 ] || exit 0
 PAR=4
