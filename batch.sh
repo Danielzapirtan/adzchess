@@ -7,7 +7,7 @@ export USERNAME=antoniudanielzapirtan
 NPROCESSORS=4
 ping -c 1 8.8.8.8 &>/dev/null || exit 0
 url1="https://api.chess.com/pub/player/$USERNAME/games/to-move"
-curl -s "$url1" >$HOME/games1.txt
+curl -s "$url1" >$HOME/games1.txt &>/dev/null || exit 0
 COUNT=$(jq '.games | length' $HOME/games1.txt)
 COUNTF=$COUNT
 [ "x$COUNTF" == "x" ] && exit 0
