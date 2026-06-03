@@ -11,7 +11,7 @@ date
 for c in $COLORS; do
 	GAME=$PLAYER$c
 	echo $GAME
-	cat - > pgn/$GAME.pgn
+	#cat - > pgn/$GAME.pgn
 	echo $GAME >> $GLIST
 done
 fi
