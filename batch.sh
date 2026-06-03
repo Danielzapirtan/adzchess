@@ -8,7 +8,7 @@ export TZ=Europe/Bucharest
 export USERNAME=antoniudanielzapirtan
 NPROCESSORS=4
 
-ping -c 1 8.8.8.8 &>/dev/null
+#ping -c 1 8.8.8.8 &>/dev/null
 [ $? -eq 2 ] && exit 0
 url1="https://api.chess.com/pub/player/$USERNAME/games/to-move"
 curl -s "$url1" >$HOME/games1.txt
