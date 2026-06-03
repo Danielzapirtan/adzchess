@@ -10,6 +10,7 @@ url1="https://api.chess.com/pub/player/$USERNAME/games/to-move"
 curl -s "$url1" >$HOME/games1.txt
 COUNT=$(jq '.games | length' $HOME/games1.txt)
 COUNTF=$COUNT
+[ "$COUNTF" == "" ] || exit 0
 [ $COUNTF -gt 0 ] || exit 0
 PAR=4
 ST=1500
