@@ -5,6 +5,7 @@ cd $HOME/git-client/adzchess
 export TZ=Europe/Bucharest
 export USERNAME=antoniudanielzapirtan
 NPROCESSORS=4
+#curl -c 1 8.8.8.8 || exit 0
 url1="https://api.chess.com/pub/player/$USERNAME/games/to-move"
 curl -s "$url1" >$HOME/games1.txt
 COUNT=$(jq '.games | length' $HOME/games1.txt)
