@@ -18,7 +18,7 @@ fi
 
 git add .
 git commit -miccf
-git push
+git push origin main
 gh workflow run iccf
 
 echo "Workflow triggered ok"
