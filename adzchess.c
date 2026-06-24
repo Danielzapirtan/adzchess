@@ -255,6 +255,7 @@ int analysis(void)
 		fprintf(stdout, "\n");
 		fflush(stdout);
 	} else if (gmode == GO) {
+		fprintf(stdout, "Depth: %u\n", depth);
 		show_move(best_move, start, stm % 2, buf);
 		s5 best = tree->best;
 		if (best <= -19994) {

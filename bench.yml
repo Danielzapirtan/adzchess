@@ -36,7 +36,7 @@ jobs:
           GN=ecart
           for n in $(seq 1 $PROCESSORS); do
             cat $GN.txt
-            cat $GN.2.txt | tail -n 1
+            cat $GN.2.txt | tail -n 2
             GN=$(($GN + 1))
           done
 
