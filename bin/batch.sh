@@ -6,7 +6,7 @@ cd $HOME/git-client/adzchess
 
 export TZ=Europe/Bucharest
 export USERNAME=antoniudanielzapirtan
-NPROCESSORS=4
+NPROCESSORS=3
 
 #ping -c 1 8.8.8.8 &>/dev/null
 #[ $? -eq 2 ] && exit 0
