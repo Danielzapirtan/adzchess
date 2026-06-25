@@ -525,7 +525,7 @@ VALUE eval(BOARD board, LEVEL level)
     }
 #endif
 #endif
-    value += ((rand() % 7) - 3);
+    value += ((nodes & 7) - 3);
     if (level > 1)
         return (value + (treea[level - 2].max_index - treea[level - 1].max_index));
     return (value);
