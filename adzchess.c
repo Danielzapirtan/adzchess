@@ -207,13 +207,18 @@ int analysis(void)
 #endif
     if (gmode == ANALYSIS)
         show_board(start, stdout);
-    treea = (TREE *) malloc (_MAXLEVEL * sizeof(TREE));
+    static TREE treea_static[_MAXLEVEL];
+    static TREE treeb_static[_MAXLEVEL];
+    
+    treea = treea_static;
+    treeb = treeb_static;
+   /* treea = (TREE *) malloc (_MAXLEVEL * sizeof(TREE));
     if (!treea) {
         warn("Out of memory!");
     }
     treeb = (TREE *) malloc(_MAXLEVEL * sizeof(TREE));
     if (!treeb)
-        warn("Out of memory");
+        warn("Out of memory");*/
     init(&elapsed);
     nodes = 0LL;
     pvsready = 0;
