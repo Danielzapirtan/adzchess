@@ -322,8 +322,9 @@ VALUE search(TREE *tree_, LEVEL level, LEVEL depth)
     if (newpv)
 	tree->bl_len = 1;
     tree->best = -_MAXVALUE;
+    TREE *ntree_base = &tree_[level + 1];
     for (tree->curr_index = 0; tree->curr_index < tree->max_index; (tree->curr_index)++) {
-        ntree = &tree_[level + 1];
+        ntree = ntree_base;
         copy_move(tree->legal_moves[tree->curr_index], tree->curr_move);
         makemove(tree->curr_board, tree->curr_move, tree->next_board);
         copy_board(tree->next_board, ntree->curr_board);
@@ -933,7 +934,10 @@ MOVEINDEX gendeep(BOARD board, MOVELIST movelist, LEVEL depth)
     s5 y;
     for (y = 7; y >= 0; y--)
     for (x = 0; x < 8; x++) {
-        switch(board[y][x]) {
+	register int piece = board[y][x];
+	if (piece <= 0)
+		continue;
+        switch (piece) {
         case _WP: genP(board, y, x, &curr_index, movelist); break;
         case _WN: genN(board, y, x, &curr_index, movelist); break;
         case _WB: genB(board, y, x, &curr_index, movelist); break;
@@ -1022,11 +1026,12 @@ int board_cmp(BOARD src, BOARD dest)
 
 void copy_board(BOARD src, BOARD dest)
 {
-    u5 x;
+    memcpy(dest, src, sizeof(BOARD));
+    /*u5 x;
     u5 y;
     for (y = 0; y < 9; y++)
     for (x = 0; x < 8; x++)
-        dest[y][x] = src[y][x];
+        dest[y][x] = src[y][x];*/
 }
 
 void copy_move(MOVE src, MOVE dest)
