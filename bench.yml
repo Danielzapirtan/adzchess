@@ -6,7 +6,7 @@ on:
 jobs:
   bench:
     name: Bench Job
-    runs-on: ubuntu-latest
+    runs-on: macos-14
     timeout-minutes: 355
 
     steps:
@@ -15,8 +15,8 @@ jobs:
       
       - name: Preparations
         run: |
-          sudo apt update
-          sudo apt install -y git build-essential
+          brew update
+          brew install gcc jq
           _ICCF=0 _NOEDIT=2 _CHESS960=0 sh build.sh
           chmod 0755 adzchess
       
