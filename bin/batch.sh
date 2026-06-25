@@ -48,7 +48,7 @@ cat bench.yml \
 	>.github/workflows/bench.yml
 date=$(date +%Y%m%d-%H%M%S)
 echo $date
-sh wf >/dev/null 2>&1 &
+sh bin/wf >/dev/null 2>&1 &
 sleep 5
 ECART=$(($ECART + $NPROCESSORS))
 done
