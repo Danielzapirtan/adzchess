@@ -17,7 +17,7 @@ COUNT=$(jq '.games | length' $HOME/games1.txt)
 [ $COUNT -gt 0 ] || exit 0
 COUNTF=$COUNT
 PAR=4
-ST=10
+ST=32
 if [ $COUNTF -lt $PAR ]; then
 	PAR=$COUNTF
 fi
