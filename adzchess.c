@@ -1486,7 +1486,7 @@ end:
 
 void parse_pgn(void)
 {
-    if (system("pgn-extract -F start.pgn -w200 > pf") != 0) {
+    if (system("/usr/games/pgn-extract -F start.pgn -w200 > pf") != 0) {
         // Handle error when pgn-extract fails
         fprintf(stderr, "Error running pgn-extract\n");
         return;

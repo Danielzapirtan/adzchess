@@ -1,0 +1,58 @@
+Processing start.pgn
+
+1 game matched out of 1.
+8 r  n  b  q  k  b  .  r 
+7 p  p  p  .  .  p  p  p 
+6 .  .  .  .  p  n  .  . 
+5 .  .  .  p  .  .  .  . 
+4 .  .  P  P  .  .  .  . 
+3 .  .  N  .  .  N  .  . 
+2 P  P  .  .  P  P  P  P 
+1 R  .  B  Q  K  B  .  R 
+  a  b  c  d  e  f  g  h
+
+8 r  .  b  q  k  b  .  r 
+7 p  p  .  .  p  p  p  p 
+6 .  .  n  .  .  n  .  . 
+5 .  .  p  p  .  .  .  . 
+4 .  .  .  P  .  .  .  . 
+3 .  .  .  .  P  N  .  . 
+2 P  P  P  .  .  P  P  P 
+1 R  N  B  Q  K  B  .  R 
+  a  b  c  d  e  f  g  h
+
+Depth: 5
+Evaluation: 0.00
+Branching factor: 13.48
+Best variation: c7c5 ♗c1e3 ♘b8c6 ♕d1a4 ♘c6e5 
+Elapsed: 0.16
+NPS: 2745379
+
+Depth: 6
+Evaluation: -0.14
+Branching factor: 11.91
+Best variation: ♘f6e4 ♕d1a4+ ♗c8d7 ♕a4c2 ♘b8c6 c4c5 f7f5 
+Elapsed: 0.91
+NPS: 3125638
+
+Depth: 7
+Evaluation: 0.05
+Branching factor: 10.22
+Best variation: b7b5 c4c5 b5b4 ♗c1g5 ♘b8c6 ♗g5xf6 ♕d8xf6 
+Elapsed: 3.55
+NPS: 3281531
+
+Depth: 8
+Evaluation: -0.20
+Branching factor: 8.88
+Best variation: ♘f6e4 ♕d1d3 c7c5 c4xd5 e6xd5 a2a4 c5c4 a4a5 
+Elapsed: 12.11
+NPS: 3202255
+
+Depth: 9
+Evaluation: 0.00
+Branching factor: 8.05
+Best variation: c7c5 c4xd5 ♘f6xd5 e2e4 ♘d5xc3 b2xc3 ♘b8c6 d4xc5 ♗f8xc5 
+Elapsed: 44.63
+NPS: 3173023
+
