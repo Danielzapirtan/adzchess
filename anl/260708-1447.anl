@@ -49,3 +49,10 @@ Best variation: ♘f6e4 ♕d1d3 c7c5 c4xd5 e6xd5 a2a4 c5c4 a4a5
 Elapsed: 11.79
 NPS: 3186845
 
+Depth: 9
+Evaluation: 0.00
+Branching factor: 8.02
+Best variation: c7c5 c4xd5 ♘f6xd5 e2e4 ♘d5xc3 b2xc3 ♘b8c6 d4xc5 ♗f8xc5 
+Elapsed: 47.44
+NPS: 2887395
+
