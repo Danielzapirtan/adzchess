@@ -1,0 +1,92 @@
+sh: /usr/games/pgn-extract: inaccessible or not found
+Error running pgn-extract
+8 r  n  b  q  k  b  .  r 
+7 p  p  p  .  .  p  p  p 
+6 .  .  .  .  p  n  .  . 
+5 .  .  .  p  .  .  .  . 
+4 .  .  P  P  .  .  .  . 
+3 .  .  N  .  .  N  .  . 
+2 P  P  .  .  P  P  P  P 
+1 R  .  B  Q  K  B  .  R 
+  a  b  c  d  e  f  g  h
+
+8 r  .  b  q  k  b  .  r 
+7 p  p  .  .  p  p  p  p 
+6 .  .  n  .  .  n  .  . 
+5 .  .  p  p  .  .  .  . 
+4 .  .  .  P  .  .  .  . 
+3 .  .  .  .  P  N  .  . 
+2 P  P  P  .  .  P  P  P 
+1 R  N  B  Q  K  B  .  R 
+  a  b  c  d  e  f  g  h
+
+Depth: 5
+Evaluation: 0.00
+Branching factor: 13.47
+Best variation: c7c5 ♗c1e3 ♘b8c6 ♕d1a4 ♘c6e5 
+Elapsed: 0.92
+NPS: 479157
+
+Depth: 6
+Evaluation: -0.14
+Branching factor: 11.84
+Best variation: ♘f6e4 ♕d1a4+ ♗c8d7 ♕a4c2 ♘b8c6 c4c5 f7f5 
+Elapsed: 2.29
+NPS: 1201974
+
+Depth: 7
+Evaluation: 0.06
+Branching factor: 10.22
+Best variation: b7b5 c4c5 b5b4 ♗c1g5 ♘b8c6 ♗g5xf6 ♕d8xf6 
+Elapsed: 7.30
+NPS: 1591317
+
+Depth: 8
+Evaluation: -0.20
+Branching factor: 8.85
+Best variation: ♘f6e4 ♕d1d3 c7c5 c4xd5 e6xd5 a2a4 c5c4 a4a5 
+Elapsed: 22.24
+NPS: 1688671
+
+Depth: 9
+Evaluation: 0.00
+Branching factor: 8.02
+Best variation: c7c5 c4xd5 ♘f6xd5 e2e4 ♘d5xc3 b2xc3 ♘b8c6 d4xc5 ♗f8xc5 
+Elapsed: 76.26
+NPS: 1796346
+
+Depth: 10
+Evaluation: -0.20
+Branching factor: 7.21
+Best variation: c7c5 ♘f3e5 h7h5 c4xd5 e6xd5 ♕d1a4+ ♘b8d7 f2f4 c5c4 f4f5 
+Elapsed: 205.77
+NPS: 1832794
+
+Depth: 11
+Evaluation: 0.09
+Branching factor: 6.70
+Best variation: ♘f6e4 a2a4 ♘e4xc3 b2xc3 d5xc4 e2e4 f7f5 ♗c1g5 ♕d8d7 ♘f3e5 ♕d7d6 
+Elapsed: 662.85
+NPS: 1851491
+
+Depth: 12
+Evaluation: -0.16
+Branching factor: 6.22
+Best variation: ♘f6e4 h2h4 ♘b8c6 h4h5 ♕d8f6 ♕d1b3 g7g5 g2g4 ♗f8d6 c4c5 ♗d6xc5 ♘c3xd5 
+Elapsed: 1746.37
+NPS: 1910348
+
+Depth: 13
+Evaluation: 0.09
+Branching factor: 5.84
+Best variation: ♘f6e4 c4c5 a7a5 ♕d1a4+ c7c6 ♗c1f4 b7b5 ♕a4c2 b5b4 ♘c3xe4 d5xe4 ♕c2xe4 ♗f8xc5 
+Elapsed: 4728.47
+NPS: 1942337
+
+Depth: 14
+Evaluation: -0.10
+Branching factor: 5.57
+Best variation: c7c6 c4c5 ♘f6e4 ♘c3b1 g7g5 b2b4 g5g4 ♘f3e5 ♕d8c7 b4b5 c6xb5 e2e3 b5b4 ♕d1xg4 
+Elapsed: 14183.97
+NPS: 1960030
+
