@@ -5,7 +5,7 @@ SOURCE=adzchess.c
 : ${gamesymbol:=ini}
 
 if [ x"$_ICCF" = x1 ]; then
-  SOURCE=adzchess.c
+  SOURCE=ctpk.c
 fi
 
 gcc -o adzchess \
