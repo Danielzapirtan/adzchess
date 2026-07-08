@@ -1,4 +1,4 @@
-name: ICCF
+name: PGN
 
 on:
   workflow_dispatch:
