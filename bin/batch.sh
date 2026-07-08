@@ -49,6 +49,6 @@ cat bench.yml \
 date=$(date +%Y%m%d-%H%M%S)
 echo $date
 sh bin/wf >/dev/null 2>&1 &
-#sleep 5
+sleep 5
 ECART=$(($ECART + $NPROCESSORS))
 done
