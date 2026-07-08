@@ -1,6 +1,5 @@
-Processing start.pgn
-
-1 game matched out of 1.
+sh: /usr/games/pgn-extract: inaccessible or not found
+Error running pgn-extract
 8 r  n  b  q  k  b  .  r 
 7 p  p  p  .  .  p  p  p 
 6 .  .  .  .  p  n  .  . 
@@ -25,48 +24,41 @@ Depth: 5
 Evaluation: 0.00
 Branching factor: 13.48
 Best variation: c7c5 ♗c1e3 ♘b8c6 ♕d1a4 ♘c6e5 
-Elapsed: 0.16
-NPS: 2745379
+Elapsed: 0.41
+NPS: 1080365
 
 Depth: 6
 Evaluation: -0.14
 Branching factor: 11.91
 Best variation: ♘f6e4 ♕d1a4+ ♗c8d7 ♕a4c2 ♘b8c6 c4c5 f7f5 
-Elapsed: 0.91
-NPS: 3125638
+Elapsed: 1.86
+NPS: 1536665
 
 Depth: 7
 Evaluation: 0.05
 Branching factor: 10.22
 Best variation: b7b5 c4c5 b5b4 ♗c1g5 ♘b8c6 ♗g5xf6 ♕d8xf6 
-Elapsed: 3.55
-NPS: 3281531
+Elapsed: 6.91
+NPS: 1688340
 
 Depth: 8
 Evaluation: -0.20
 Branching factor: 8.88
 Best variation: ♘f6e4 ♕d1d3 c7c5 c4xd5 e6xd5 a2a4 c5c4 a4a5 
-Elapsed: 12.11
-NPS: 3202255
+Elapsed: 22.45
+NPS: 1728021
 
 Depth: 9
 Evaluation: 0.00
 Branching factor: 8.05
 Best variation: c7c5 c4xd5 ♘f6xd5 e2e4 ♘d5xc3 b2xc3 ♘b8c6 d4xc5 ♗f8xc5 
-Elapsed: 44.63
-NPS: 3173023
+Elapsed: 78.92
+NPS: 1794364
 
 Depth: 10
 Evaluation: -0.20
 Branching factor: 7.23
 Best variation: c7c5 ♘f3e5 h7h5 c4xd5 e6xd5 ♕d1a4+ ♘b8d7 f2f4 h5h4 f4f5 
-Elapsed: 121.97
-NPS: 3205096
-
-Depth: 11
-Evaluation: 0.09
-Branching factor: 6.72
-Best variation: ♘f6e4 a2a4 ♘e4xc3 b2xc3 d5xc4 e2e4 f7f5 ♗c1g5 ♕d8d7 ♘f3e5 ♕d7d6 
-Elapsed: 417.31
-NPS: 3032232
+Elapsed: 217.33
+NPS: 1798691
 
