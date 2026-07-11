@@ -6,7 +6,7 @@ cd $HOME/code/adzchess
 
 export TZ=Europe/Bucharest
 export USERNAME=antoniudanielzapirtan
-NPROCESSORS=3
+NPROCESSORS=4
 
 #ping -c 1 8.8.8.8 &>/dev/null
 #[ $? -eq 2 ] && exit 0
