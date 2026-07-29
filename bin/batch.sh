@@ -2,7 +2,7 @@
 
 set -e
 
-cd /content/code/adzchess
+cd $HOME/code/adzchess
 
 export TZ=Europe/Bucharest
 export USERNAME=antoniudanielzapirtan
