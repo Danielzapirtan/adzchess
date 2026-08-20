@@ -7,7 +7,7 @@ jobs:
   bench:
     name: Bench Job
     runs-on: ubuntu-latest
-    timeout-minutes: 355
+    timeout-minutes: 360
 
     steps:
       - name: Checkout code
