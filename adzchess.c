@@ -212,13 +212,6 @@ int analysis(void)
     
     treea = treea_static;
     treeb = treeb_static;
-   /* treea = (TREE *) malloc (_MAXLEVEL * sizeof(TREE));
-    if (!treea) {
-        warn("Out of memory!");
-    }
-    treeb = (TREE *) malloc(_MAXLEVEL * sizeof(TREE));
-    if (!treeb)
-        warn("Out of memory");*/
     init(&elapsed);
     nodes = 0LL;
     pvsready = 0;
@@ -638,36 +631,6 @@ void addprom(s5 y, s5 x, s5 y1, s5 x1, s5 to, MOVEINDEX *curr_index, MOVELIST mo
         warn("Index too big");
 }
 
-/*void castle(BOARD board, s5 y, s5 x, MOVEINDEX *curr_index, MOVELIST movelist)
-{
-    BOARD aux;
-    if (y != 0) return;
-    if (x != 4) return;
-    if (board[y][x] != _WK)
-        return;
-    if (board[0][0] == _WR)
-    if (board[0][1] == 0)
-    if (board[0][2] == 0)
-    if (board[0][3] == 0)
-    if (board[8][0] == 1) {
-        copy_board(board, aux);
-        aux[0][2] = _WK;
-        aux[0][3] = _WK;
-        if (! in_check(aux))
-            addm(0, 4, 0, 2, curr_index, movelist);
-    }
-    if (board[0][7] == _WR)
-    if (board[0][6] == 0)
-    if (board[0][5] == 0)
-    if (board[8][1] == 1) {
-        copy_board(board, aux);
-        aux[0][5] = _WK;
-        aux[0][6] = _WK;
-        if (! in_check(aux))
-            addm(0, 4, 0, 6, curr_index, movelist);
-    }
-}*/
-
 void castle(BOARD board, s5 y, s5 x, MOVEINDEX *curr_index, MOVELIST movelist)
 {
     BOARD aux;
@@ -1029,11 +992,6 @@ int board_cmp(BOARD src, BOARD dest)
 void copy_board(BOARD src, BOARD dest)
 {
     memcpy(dest, src, sizeof(BOARD));
-    /*u5 x;
-    u5 y;
-    for (y = 0; y < 9; y++)
-    for (x = 0; x < 8; x++)
-        dest[y][x] = src[y][x];*/
 }
 
 void copy_move(MOVE src, MOVE dest)
@@ -1367,18 +1325,6 @@ void setup_board(BOARD board)
 
 void load_values(void)
 {
-	/*FILE *vf = fopen("start.bpf", "r");
-	if (!vf)
-		exit(1);
-	for (int i = 1; i < 6; i++) {
-		int j;
-		fscanf(vf, "%d", &j);
-		if (j != i)
-			exit(0);
-		fscanf(vf, "%d", &_VALUES[i]);
-	}
-	_VALUES[0] = 0;
-	fclose(vf);*/
     _VALUES[0] = 0;
     _VALUES[1] = 100;
     _VALUES[2] = 315;
