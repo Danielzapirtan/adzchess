@@ -9,8 +9,12 @@ url="https://api.chess.com/pub/player/$USERNAME/games"
 set -e
 
 if true; then
-curl -s $url1 >/tmp/games1.txt
-curl -s $url >/tmp/games.txt
+curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 10 --max-time 30 \
+	-A 'adzchess/1.0 (+https://github.com/Danielzapirtan/adzchess)' \
+	-H 'Accept: application/json' "$url1" >/tmp/games1.txt
+curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 10 --max-time 30 \
+	-A 'adzchess/1.0 (+https://github.com/Danielzapirtan/adzchess)' \
+	-H 'Accept: application/json' "$url" >/tmp/games.txt
 fi
 
 echo $GN

@@ -11,7 +11,9 @@ NPROCESSORS=4
 #ping -c 1 8.8.8.8 &>/dev/null
 #[ $? -eq 2 ] && exit 0
 url1="https://api.chess.com/pub/player/$USERNAME/games/to-move"
-curl -s "$url1" >$HOME/games1.txt
+curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 10 --max-time 30 \
+	-A 'adzchess/1.0 (+https://github.com/Danielzapirtan/adzchess)' \
+	-H 'Accept: application/json' "$url1" >"$HOME/games1.txt"
 COUNT=$(jq '.games | length' $HOME/games1.txt)
 [ "x$COUNT" = "x" ] && exit 0
 [ $COUNT -gt 0 ] || exit 0
