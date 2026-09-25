@@ -1,8 +1,8 @@
 #! /bin/bash
 
-COUNT=6
+COUNT=2
 while true; do
-  R=$(($RANDOM % 6))
+  R=$(($RANDOM % $COUNT))
   if true || echo $R | grep -qv "0\|1\|3"; then
 	  break
   fi
