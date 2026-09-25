@@ -1,35 +1,30 @@
 Depth: 5
-Evaluation: -1.80
+Evaluation: 1.28
 ♖a8a8
-NPS: 1253016
+NPS: 1347265
 
 Depth: 6
-Evaluation: -1.00
-♔e7e8
-NPS: 1090106
+Evaluation: 1.45
+♖g7h7
+NPS: 1526897
 
 Depth: 7
-Evaluation: -1.09
-♗b4xd2
-NPS: 1254026
+Evaluation: 1.29
+b7b5
+NPS: 1330687
 
 Depth: 8
-Evaluation: -0.99
-♔e7d8
-NPS: 1209054
+Evaluation: 1.42
+♘g8f6
+NPS: 1430124
 
 Depth: 9
-Evaluation: -0.89
-♔e7d6
-NPS: 1344463
+Evaluation: 1.21
+♘g8f6
+NPS: 1362138
 
 Depth: 10
-Evaluation: -1.65
-♔e7d8
-NPS: 1301284
-
-Depth: 11
-Evaluation: -1.14
-♔e7d6
-NPS: 1403864
+Evaluation: 1.36
+♔c8d7
+NPS: 1532000
 

@@ -1,4 +1,4 @@
 2
-"https://api.chess.com/pub/player/mfelstone99"
+"https://api.chess.com/pub/player/earlof"
 "https://api.chess.com/pub/player/antoniudanielzapirtan"
 "chess"

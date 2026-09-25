@@ -1,45 +1,35 @@
 Depth: 5
-Evaluation: 0.09
+Evaluation: -7.90
 ♖a8a8
-NPS: 1170425
+NPS: 1455164
 
 Depth: 6
-Evaluation: -0.12
-♖a8a7
-NPS: 1047082
+Evaluation: -0.91
+♕d8xf6
+NPS: 1351509
 
 Depth: 7
-Evaluation: 0.15
-g7g6
-NPS: 1241074
+Evaluation: -1.95
+♕d8xf6
+NPS: 1381726
 
 Depth: 8
-Evaluation: -0.30
-♖a8b8
-NPS: 1160210
+Evaluation: -0.91
+♕d8xf6
+NPS: 1455446
 
 Depth: 9
-Evaluation: 0.12
-g7g6
-NPS: 1293399
+Evaluation: -1.09
+♕d8xf6
+NPS: 1471108
 
 Depth: 10
-Evaluation: -0.76
-♖a8b8
-NPS: 1196224
+Evaluation: -0.80
+♕d8xf6
+NPS: 1578640
 
 Depth: 11
-Evaluation: 0.10
-♖a8a7
-NPS: 1309395
-
-Depth: 12
-Evaluation: -0.78
-♖a8b8
-NPS: 1263828
-
-Depth: 13
-Evaluation: -0.10
-♖a8a7
-NPS: 1369118
+Evaluation: -0.79
+♕d8xf6
+NPS: 1555954
 

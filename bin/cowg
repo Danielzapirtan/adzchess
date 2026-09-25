@@ -8,7 +8,7 @@
  
      GN=4
      USERNAME=antoniudanielzapirtan
-     LTG=43200
+     LTG=1500
      PROCESSORS=2
      ulimit -t $LTG
      for n in $(seq 1 $PROCESSORS); do
