@@ -1,4 +1,0 @@
-5
-"https://api.chess.com/pub/player/linnminnhtike"
-"https://api.chess.com/pub/player/antoniudanielzapirtan"
-"chess"

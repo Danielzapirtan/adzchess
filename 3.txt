@@ -1,4 +1,0 @@
-3
-"https://api.chess.com/pub/player/jigglysquirrel"
-"https://api.chess.com/pub/player/antoniudanielzapirtan"
-"chess"
