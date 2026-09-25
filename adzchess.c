@@ -400,9 +400,10 @@ VALUE eval(BOARD board, LEVEL level)
     if ((nodes % _SKIPFRAMES) == 0) {
         update(&elapsed);
         double delapsed = dclock(&elapsed);
-	if (gmode == GO)
+/*	if (gmode == GO)
 	if (delapsed > 21500.0)
 		exit(0);
+*/
     }
     for (y = 0; y < 8; y++)
     for (x = 0; x < 8; x++) {
