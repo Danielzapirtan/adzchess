@@ -1,0 +1,4 @@
+1
+"https://api.chess.com/pub/player/antoniudanielzapirtan"
+"https://api.chess.com/pub/player/amazone09"
+"chess"

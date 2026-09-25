@@ -1,0 +1,4 @@
+3
+"https://api.chess.com/pub/player/antoniudanielzapirtan"
+"https://api.chess.com/pub/player/jaspony_12"
+"chess"

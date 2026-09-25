@@ -1,0 +1,35 @@
+Depth: 5
+Evaluation: -1.80
+♖a8a8
+NPS: 1253016
+
+Depth: 6
+Evaluation: -1.00
+♔e7e8
+NPS: 1090106
+
+Depth: 7
+Evaluation: -1.09
+♗b4xd2
+NPS: 1254026
+
+Depth: 8
+Evaluation: -0.99
+♔e7d8
+NPS: 1209054
+
+Depth: 9
+Evaluation: -0.89
+♔e7d6
+NPS: 1344463
+
+Depth: 10
+Evaluation: -1.65
+♔e7d8
+NPS: 1301284
+
+Depth: 11
+Evaluation: -1.14
+♔e7d6
+NPS: 1403864
+
