@@ -2,7 +2,7 @@
 
 set -e
 
-cd /content/adzchess
+#cd /content/adzchess
 
 export TZ=Europe/Bucharest
 export USERNAME=antoniudanielzapirtan
@@ -17,6 +17,9 @@ curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 10 --max-time 30 \
 COUNT=$(jq '.games | length' $HOME/games1.txt)
 [ "x$COUNT" = "x" ] && exit 0
 [ $COUNT -gt 0 ] || exit 0
+if [ $COUNT -gt 8 ]; then
+	COUNT=8
+fi
 COUNTF=$COUNT
 PAR=4
 ST=17280000
